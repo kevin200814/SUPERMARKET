@@ -11,4 +11,19 @@ public partial class webformsADM_IndexTipoProd : System.Web.UI.Page
     {
 
     }
+
+    protected void btnNuevo_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/webformsADM/ManttoTipoProd.aspx");
+    }
+
+
+
+    protected void btnEliminar_Click(object sender, EventArgs e)
+    {
+        LinkButton btnEliminar = (LinkButton)sender;
+        int ID_TIPO_PRODUCTO = Convert.ToInt32(btnEliminar.CommandArgument);
+        TIPROD_BLL.Borrar(ID_TIPO_PRODUCTO);
+        GridView1.DataBind();
+    }
 }
