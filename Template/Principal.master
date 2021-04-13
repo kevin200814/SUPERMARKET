@@ -29,6 +29,7 @@
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Registrarse</a></li>
             <li><a href="#">Realizar un Pedido</a></li>
+             <li><a href="../webformsADM/IndexTipoProd.aspx">Tipos de Productos</a></li>
             <li><a href="#">Vegetales</a></li>
             <li><a href="#">Frutas</a></li>
             <li><a href="#">Carnes</a></li>
