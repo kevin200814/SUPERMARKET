@@ -32,6 +32,7 @@
             <li><a href="#">Licores</a></li>
             <li><a href="#">Snacks</a></li>
             <li><a href="#">Tecnologia</a></li>
+            <li><a href="../webformsADM/IndexProveedor.aspx">Proveedores</a></li>
             <li><a href="#">Cerrar Sesion</a></li>
 
         </ul>
