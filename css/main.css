@@ -2011,19 +2011,19 @@ input[type="password"],
 input[type="email"],
 select,
 textarea {
+    border-style: solid;
+    border-color: inherit;
+    border-width: 1px;
     -moz-appearance: none;
     -webkit-appearance: none;
     -ms-appearance: none;
     appearance: none;
     border-radius: 2px;
-    border: none;
-    border: solid 1px;
     color: inherit;
     display: block;
     outline: 0;
-    padding: 0 1rem;
     text-decoration: none;
-    width: 100%;
+    width: 94%;
 }
 
 input[type="text"]:invalid,
@@ -2070,7 +2070,7 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 select {
-    height: 2.75rem;
+    height: 65px;
 }
 
 textarea {
