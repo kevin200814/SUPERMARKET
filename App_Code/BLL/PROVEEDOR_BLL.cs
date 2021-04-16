@@ -15,7 +15,7 @@ public class PROVEEDOR_BLL
         //
     }
     static MARKET_DSTableAdapters.PROVEEDORTableAdapter adto = new MARKET_DSTableAdapters.PROVEEDORTableAdapter();
-     
+
     public static List<PROVEEDOR_DTO> MostrarTodos()
     {
         List<PROVEEDOR_DTO> mostrarprov = new List<PROVEEDOR_DTO>();
@@ -35,15 +35,18 @@ public class PROVEEDOR_BLL
         return objProv;
     }
 
-    public static PROVEEDOR_DTO MostrarID(int ID_PROVEEDOR)
+    public static PROVEEDOR_DTO MostrarID(int codprove)
     {
-        MARKET_DS.PROVEEDORDataTable table = adto.MostrarProvee(ID_PROVEEDOR);
+        MARKET_DS.PROVEEDORDataTable table = adto.MostrarProvee(codprove);
         if(table.Rows.Count == 0)
         {
             return null;
         }
         return filaSTDO(table[0]);
     }
+    
+  
+
 
     //Mantenimientos
 
