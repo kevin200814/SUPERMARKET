@@ -11,13 +11,13 @@
                 <div class="form-group"> 
                     <div class="col-md-10">
                          <asp:Label ID="Label2" runat="server" Text="Label"> Codigo producto</asp:Label>
-                        <asp:TextBox ID="txtCodProd" Height="32px" Width="944px" class="form-control" Rows="5" runat="server" placeholder="Ingrese el Nombre del producto" Height="32px" Width="944px"></asp:TextBox>
+                        <asp:TextBox ID="txtCodProd" Height="32px" Width="944px" class="form-control" Rows="5" runat="server" placeholder="Ingrese el Nombre del producto" ></asp:TextBox>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-10">
                         <asp:Label ID="Label1" runat="server" Text="Label">Nombre del producto</asp:Label>
-                        <asp:TextBox ID="txtNombreProd" Height="32px" Width="944px" Placeholder="Nombre del producto" class="form-control" Rows="5"  Height="32px" Width="944px" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtNombreProd" Height="32px" Width="944px" Placeholder="Nombre del producto" class="form-control" Rows="5"   runat="server"></asp:TextBox>
                     </div>
                 </div>
 
