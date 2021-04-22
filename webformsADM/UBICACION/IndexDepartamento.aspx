@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/PrincipClient.master" AutoEventWireup="true" CodeFile="IndexDepartamento.aspx.cs" Inherits="IndexDepartamento" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/PrincipClien.master" AutoEventWireup="true" CodeFile="IndexDepartamento.aspx.cs" Inherits="IndexDepartamento" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>

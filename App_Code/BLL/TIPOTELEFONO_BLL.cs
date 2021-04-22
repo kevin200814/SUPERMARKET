@@ -41,7 +41,7 @@ public class TIPOTELEFONO_BLL
 
     public static TIPOTELEFONO_DTO MostrarID(int ID_TIPO_TELEFONO)
     {
-        MARKET_DS.TIPO_TELEFONODataTable tabla = adto.MostarTipoTelefonoPorID(ID_TIPO_TELEFONO);
+        MARKET_DS.TIPO_TELEFONODataTable tabla = adto.MostrarTipoTelefonoPorID(ID_TIPO_TELEFONO);
         if (tabla.Rows.Count == 0)
         {
             return null;

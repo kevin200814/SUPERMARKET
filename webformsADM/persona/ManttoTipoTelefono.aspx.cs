@@ -30,7 +30,7 @@ public partial class Vistas_ManttoTipoTelefono : System.Web.UI.Page
         string DESCRIPCION_TIPO_TELEFONO = txt_DESCRIPCION_TIPO_TELEFONO.Text;
         try
         {
-            TIPROD_BLL.Insertar(ID_TIPO_TELEFONO, TIPO_TELEFONO, DESCRIPCION_TIPO_TELEFONO);
+            TIPOTELEFONO_BLL.Insertar(ID_TIPO_TELEFONO, TIPO_TELEFONO, DESCRIPCION_TIPO_TELEFONO);
             Response.Redirect("~/webformsADM/persona/IndexTipoTelefono.aspx");
         }
         catch (Exception ex)
@@ -46,7 +46,7 @@ public partial class Vistas_ManttoTipoTelefono : System.Web.UI.Page
         string DESCRIPCION_TIPO_TELEFONO = txt_DESCRIPCION_TIPO_TELEFONO.Text;
         try
         {
-            TIPROD_BLL.Actualizar(ID_TIPO_TELEFONO, TIPO_TELEFONO, DESCRIPCION_TIPO_TELEFONO);
+            TIPOTELEFONO_BLL.Actualizar(ID_TIPO_TELEFONO, TIPO_TELEFONO, DESCRIPCION_TIPO_TELEFONO);
             Response.Redirect("~/webformsADM/persona/IndexTipoTelefono.aspx");
         }
         catch (Exception ex)
