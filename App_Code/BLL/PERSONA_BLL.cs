@@ -20,7 +20,7 @@ public class PERSONA_BLL
     public static List<PERSONA_DTO> MostrarTodos()
     {
         List<PERSONA_DTO> mostraroles = new List<PERSONA_DTO>();
-        
+
         MARKET_DS.PERSONADataTable tabla = adto.MostrarTodoPersona();
         foreach (MARKET_DS.PERSONARow fila in tabla)
         {
@@ -46,7 +46,6 @@ public class PERSONA_BLL
 
         return objTprod;
     }
-
     public static PERSONA_DTO MostrarID(int ID_PERSONA)
     {
         MARKET_DS.PERSONADataTable tabla = adto.MostrarPersonaID(ID_PERSONA);

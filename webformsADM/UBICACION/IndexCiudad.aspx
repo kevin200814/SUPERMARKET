@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="container body-content">
-          <h2>Tipos de Productos</h2>
+          <h2>Ciudad</h2>
            <br />
            <br />
             <p>
