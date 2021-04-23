@@ -19,7 +19,7 @@
                     <br />
                     <div class="col-md-10">
                         <asp:Label ID="Label1" runat="server" Text="Label"> Fecha de contratación</asp:Label>
-                        <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_FECHA_CONTRATACION_EMPLEADO" placeholder="Ingrese Fecha de Contratacion"></asp:TextBox>
+                        <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_FECHA_CONTRATACION_EMPLEADO" placeholder="Ingrese Fecha de Contratacion" TextMode="Date"></asp:TextBox>
                     </div>
                 </div>
 

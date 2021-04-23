@@ -11,7 +11,7 @@
                 
                 <div class="col-md-10">
                      <asp:Label ID="Label2" runat="server" Text="Label">Numero de registro de telefono</asp:Label>
-                    <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_ID_TIPO_TELEFONO" placeholder="Ingrese el ID"></asp:TextBox>
+                    <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_ID_TIPO_TELEFONO" placeholder="Ingrese el ID" TextMode="Number"></asp:TextBox>
                 </div>
             </div>
 
@@ -19,7 +19,7 @@
                
                 <div class="col-md-10">
                      <asp:Label ID="Label1" runat="server" Text="Label">Tipo de telefono</asp:Label>
-                    <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_TIPO_TELEFONO" placeholder="Ingrese Tipo de Telefono"></asp:TextBox>
+                    <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_TIPO_TELEFONO" placeholder="Ingrese Tipo de Telefono" TextMode="Number"></asp:TextBox>
                 </div>
             </div>
 
@@ -34,7 +34,7 @@
             <div class="form-group">
                
                 <div class="col-md-10">
-                    <asp:LinkButton ID="Button1" runat="server" class="btn btn-success" onClick="Button1_Click">
+                    <asp:LinkButton ID="Button1" runat="server" class="btn btn-success" OnClick="Button1_Click">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                         <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>

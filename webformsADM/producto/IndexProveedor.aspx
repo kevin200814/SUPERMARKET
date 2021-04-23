@@ -30,7 +30,7 @@
 
             <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:HyperLink ID="btnActualizar" NavigateUrl='<%#"~/webformsADM/producto/MantProveedor.aspx?ID_TIPO_PRODUCTO="+ Eval("ID_PROVEEDOR")%>' runat="server">Editar</asp:HyperLink>
+                    <asp:HyperLink NavigateUrl='<%#"~/webformsADM/producto/MantProveedor.aspx?ID_PROVEEDOR="+ Eval("ID_PROVEEDOR")%>' runat="server">Editar</asp:HyperLink>
                 </ItemTemplate>
             </asp:TemplateField>
            
