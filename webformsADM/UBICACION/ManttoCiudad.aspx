@@ -4,30 +4,28 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
-    <div class="container">
-        <div class="col-md-8">
-        <div class="panel panel-default">
-        <div class="panel-heading">
-            <h2>C I U D A D</h2>
-        </div>
-        <div class="panel-body">
-            <div class="form-group">
-                <br/>
+   <div class="container body-content">
+            <h2>Ciudad</h2>
+            <div class="form-horizontal">
+                <br />
+                <div class="form-group"> 
                 <div class="col-m-10">
-                    <asp:TextBox runat="server" CssClass="form-control" Rows="5" ID="txtCodCiudad" placeholder="Ingrese el ID"></asp:TextBox>
+                    <asp:Label ID="Label1" runat="server" Text="Label">ID Ciudad</asp:Label>
+                    <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txtCodCiudad" placeholder="Ingrese el ID"></asp:TextBox>
                 </div>
             </div>
             
             <div class="form-group">
-                <br/>
+               
                 <div class="col-m-10">
-                    <asp:TextBox runat="server" CssClass="form-control" Rows="5" ID="txtNomCiudad" placeholder="Ingrese el nombre de la ciudad"></asp:TextBox>
+                     <asp:Label ID="Label2" runat="server" Text="Label">Nombre Ciudad</asp:Label>
+                    <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txtNomCiudad" placeholder="Ingrese el nombre de la ciudad"></asp:TextBox>
                 </div>
             </div>
 
             <div class="form-group">
-                <br/>
-                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="odsDepartamentos" DataTextField="NOMBRE_DEPARTAMENTO" DataValueField="ID_DEPARTAMENTO"></asp:DropDownList>
+               <asp:Label ID="Label3" runat="server" Text="Label">Departamento al que pertenece</asp:Label>
+                <asp:DropDownList ID="DropDownList1" Height="32px" Width="944px" runat="server" DataSourceID="odsDepartamentos" DataTextField="NOMBRE_DEPARTAMENTO" DataValueField="ID_DEPARTAMENTO"></asp:DropDownList>
                 <asp:ObjectDataSource ID="odsDepartamentos" runat="server" SelectMethod="MostrarTodos" TypeName="DEPARTAMENTO_BLL"></asp:ObjectDataSource>
             </div>
         </div>
@@ -43,8 +41,7 @@
             </asp:LinkButton>
         </div>
     </div>
-    </div>
-    </div>
+
     
      
     <br />

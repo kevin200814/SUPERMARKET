@@ -51,7 +51,7 @@
                 <br />
                 <div class="col-md-10">
                     <asp:Label ID="Label6" runat="server" Text="Label">Fecha de Nacimiento</asp:Label>
-                    <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_FECHA_NACIMIENTO_PERSONA" placeholder="Ingrese Fecha Nacimiento"></asp:TextBox>
+                    <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_FECHA_NACIMIENTO_PERSONA" placeholder="Ingrese Fecha Nacimiento" TextMode="Date"></asp:TextBox>
                 </div>
             </div>
 
