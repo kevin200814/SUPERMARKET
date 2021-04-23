@@ -19,7 +19,7 @@ public partial class Vistas_ManttoEmpleado : System.Web.UI.Page
                 txt_FECHA_CONTRATACION_EMPLEADO.Text = "" + objPermisos.FECHA_CONTRATACION_EMPLEADO;
                 txt_HORAS_LABORALES_MENSUALES_EMPLEADO.Text = "" + objPermisos.HORAS_LABORALES_MENSUALES_EMPLEADO;
                 txt_ID_PERSONA_EMPLEADO.Text = "" + objPermisos.ID_PERSONA_EMPLEADO;
-                txt_ID_CARGO_LABORAL_EMPLEADO.Text = "" + objPermisos.ID_CARGO_LABORAL_EMPLEADO;
+                DropDownList1.SelectedItem.Value = "" + objPermisos.ID_CARGO_LABORAL_EMPLEADO;
                 txt_ID_SUCURSAL_EMPLEADO.Text = "" + objPermisos.ID_SUCURSAL_EMPLEADO;
 
             }
@@ -33,7 +33,7 @@ public partial class Vistas_ManttoEmpleado : System.Web.UI.Page
         DateTime FECHA_CONTRATACION_EMPLEADO = DateTime.ParseExact(txt_FECHA_CONTRATACION_EMPLEADO.Text, "yyyy/MM/dd", null);
         int HORAS_LABORALES_MENSUALES_EMPLEADO = Convert.ToInt32(txt_HORAS_LABORALES_MENSUALES_EMPLEADO.Text);
         int ID_PERSONA_EMPLEADO = Convert.ToInt32(txt_ID_PERSONA_EMPLEADO.Text);
-        int ID_CARGO_LABORAL_EMPLEADO = Convert.ToInt32(txt_ID_CARGO_LABORAL_EMPLEADO.Text);
+        int ID_CARGO_LABORAL_EMPLEADO = Convert.ToInt32(DropDownList1.SelectedItem.Value);
         int ID_SUCURSAL_EMPLEADO = Convert.ToInt32(txt_ID_SUCURSAL_EMPLEADO.Text);
 
         try
@@ -54,7 +54,7 @@ public partial class Vistas_ManttoEmpleado : System.Web.UI.Page
         DateTime FECHA_CONTRATACION_EMPLEADO = DateTime.ParseExact(txt_FECHA_CONTRATACION_EMPLEADO.Text, "yyyy/MM/dd", null);
         int HORAS_LABORALES_MENSUALES_EMPLEADO = Convert.ToInt32(txt_HORAS_LABORALES_MENSUALES_EMPLEADO.Text);
         int ID_PERSONA_EMPLEADO = Convert.ToInt32(txt_ID_PERSONA_EMPLEADO.Text);
-        int ID_CARGO_LABORAL_EMPLEADO = Convert.ToInt32(txt_ID_CARGO_LABORAL_EMPLEADO.Text);
+        int ID_CARGO_LABORAL_EMPLEADO = Convert.ToInt32(DropDownList1.SelectedItem.Value);
         int ID_SUCURSAL_EMPLEADO = Convert.ToInt32(txt_ID_SUCURSAL_EMPLEADO.Text);
         try
         {

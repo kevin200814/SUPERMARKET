@@ -35,6 +35,7 @@
                     <br />
                     <div class="col-md-10">
                         <asp:Label ID="Label4" runat="server" Text="Label">persona</asp:Label>
+                        <asp:ObjectDataSource ID="odsPersona" runat="server" SelectMethod="MostrarTodos" TypeName="PERSONA_BLL"></asp:ObjectDataSource>
                         <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_ID_PERSONA_EMPLEADO" placeholder="Ingrese Persona Empleado"></asp:TextBox>
                     </div>
                 </div>
@@ -43,8 +44,10 @@
                     <br />
                     <div class="col-md-10">
                         <asp:Label ID="Label5" runat="server" Text="Label"> Cargo Laboral</asp:Label>
-                        <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_ID_CARGO_LABORAL_EMPLEADO" placeholder="Ingrese Cargo Laboral"></asp:TextBox>
-                    </div>
+                   <asp:DropDownList ID="DropDownList1"  Height="32px" Width="944px" runat="server" DataSourceID="odsCargo" DataTextField="CARGO_LABORAL" DataValueField="ID_CARGO_LABORAL"></asp:DropDownList>
+                    <asp:ObjectDataSource ID="odsCargo" runat="server" SelectMethod="MostrarTodos" TypeName="CARGOLABORAL_BLL"></asp:ObjectDataSource>
+                             </div>
+                   <br />
                 </div>
 
                 <div class="form-group">

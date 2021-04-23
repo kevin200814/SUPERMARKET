@@ -12,21 +12,5 @@ public partial class Vistas_indexEmpleado : System.Web.UI.Page
 
     }
 
-    protected void btnEliminar_Click(object sender, EventArgs e)
-    {
-        LinkButton btnEliminar = (LinkButton)sender;
-        int ID_EMPLEADO = Convert.ToInt32(btnEliminar.CommandArgument);
-        EMPLEADO_BLL.Borrar(ID_EMPLEADO);
-        GridView1.DataBind();
-    }
-
-    protected void btnActualizar_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("~/webformsADM/persona/ManttoEmpleado.aspx");
-    }
-
-    protected void btnNuevo_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("~/webformsADM/persona/ManttoEmpleado.aspx");
-    }
+   
 }
