@@ -12,5 +12,15 @@ public partial class Vistas_indexEmpleado : System.Web.UI.Page
 
     }
 
-   
+
+
+    protected void btnEliminar_Click(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void btnNuevo_Click(object sender, EventArgs e)
+    {
+
+    }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/Principal.master" AutoEventWireup="true" CodeFile="indexPersona.aspx.cs" Inherits="Vistas_indexPersona" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/PrincipClien.master" AutoEventWireup="true" CodeFile="indexPersona.aspx.cs" Inherits="Vistas_indexPersona" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -7,6 +7,9 @@
     <h2>Personas</h2>
     <br />
     <br />
+     <asp:LinkButton ID="btnNuevo" OnClick="btnNuevo_Click" runat="server">Nueva Persona</asp:LinkButton>
+     <br />
+     <br />
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="odsPersona">
         <Columns>
             <asp:BoundField DataField="ID_PERSONA" HeaderText="ID_PERSONA" SortExpression="ID_PERSONA" />
@@ -19,6 +22,17 @@
             <asp:BoundField DataField="DIRECCION_RESIDENCIA_PERSONA" HeaderText="DIRECCION_RESIDENCIA_PERSONA" SortExpression="DIRECCION_RESIDENCIA_PERSONA" />
             <asp:BoundField DataField="ID_CIUDAD_RESIDENCIA_PERSONA" HeaderText="ID_CIUDAD_RESIDENCIA_PERSONA" SortExpression="ID_CIUDAD_RESIDENCIA_PERSONA" />
             <asp:BoundField DataField="ID_SEXO_PERSONA" HeaderText="ID_SEXO_PERSONA" SortExpression="ID_SEXO_PERSONA" />
+        
+        <asp:TemplateField>
+            <ItemTemplate>
+
+            </ItemTemplate>
+        </asp:TemplateField>
+        <asp:TemplateField>
+            <ItemTemplate>
+
+            </ItemTemplate>
+        </asp:TemplateField>
         </Columns>
      </asp:GridView>
      <asp:ObjectDataSource ID="odsPersona" runat="server" SelectMethod="MostrarTodos" TypeName="PERSONA_BLL"></asp:ObjectDataSource>

@@ -29,4 +29,6 @@ public partial class Vistas_indexPersona : System.Web.UI.Page
     {
         Response.Redirect("~/Vistas/ManttoPersona.aspx");
     }
+
+  
 }
