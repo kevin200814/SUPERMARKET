@@ -10,7 +10,7 @@
             <div class="form-horizontal">
                 <hr />
                  <div class="form-group">
-                    ID &nbsp;<asp:Image ID="Image1" runat="server" />
+                    ID Producto &nbsp;<asp:Image ID="Image1" runat="server" />
                     <br />
                     <div class="col-md-10">
                         
