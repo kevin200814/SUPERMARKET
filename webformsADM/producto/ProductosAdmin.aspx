@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/PrincipalAdmin.master" AutoEventWireup="true" CodeFile="ProductosAdmin.aspx.cs" Inherits="webformsADM_producto_ProductosAdmin" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/PrincipClien.master" AutoEventWireup="true" CodeFile="ProductosAdmin.aspx.cs" Inherits="webformsADM_producto_ProductosAdmin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -29,7 +29,7 @@
              <asp:TemplateField>
              <ItemTemplate>
 
-                 <asp:Image ID="img" ImageUrl='<%#"~/IMG_SUPERMARKET/"+Eval("IMG") %>' runat="server" />
+                 <asp:Image ID="img" ImageUrl='<%#"~/img/"+Eval("IMG") %>' runat="server" />
                  </ItemTemplate>
             </asp:TemplateField>
 

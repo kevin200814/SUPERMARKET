@@ -29,7 +29,7 @@ public partial class webformsADM_producto_EditarProductos : System.Web.UI.Page
                     DropDownList2.Text = "" + objpermisos.ID_SUCURSAL_PRODUCTO;
                     TxtPrecio.Text = "" + objpermisos.PRECIO;
                     TxtDescripcion.Text = "" + objpermisos.DESCRIPCION_PRODUCTO;
-                    Image1.ImageUrl = "~/img/" + objpermisos.IMG.ToString();
+                    Image1.ImageUrl = "../../img/" + objpermisos.IMG.ToString();
                 }
             }
         }

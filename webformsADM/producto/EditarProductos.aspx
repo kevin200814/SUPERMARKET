@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/PrincipalAdmin.master" AutoEventWireup="true" CodeFile="EditarProductos.aspx.cs" Inherits="webformsADM_producto_EditarProductos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template/PrincipClien.master" AutoEventWireup="true" CodeFile="EditarProductos.aspx.cs" Inherits="webformsADM_producto_EditarProductos" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>

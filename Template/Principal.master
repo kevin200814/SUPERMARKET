@@ -30,9 +30,11 @@
             <li><a href="../webformsADM/Login.aspx">Iniciar Sesion</a></li>
             <li><a href="#">Registrarse</a></li>
             <li><a href="#">Realizar un Pedido</a></li>
+
             <li><a href="../webformsADM/persona/indexPersona.aspx">Personas Registradas</a></li>
             <li><a href="../webformsADM/persona/IndexSexo.aspx">Tipo de genero</a></li>
             <li><a href="../webformsADM/persona/indexEmpleado.aspx">Empleados</a></li>
+            <li><a href="../webformsADM/producto/ProductosAdmin.aspx">Productos</a></li>
             <li><a href="../webformsADM/persona/IndexCargoLaboral.aspx">Tipos de cargo laboral</a></li>
             <li><a href="../webformsADM/persona/IndexTipoTelefono.aspx">Tipos de telefono</a></li>
             <li><a href="../webformsADM/producto/IndexProveedor.aspx">Proveedores</a></li>
