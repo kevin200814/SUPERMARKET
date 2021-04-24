@@ -65,7 +65,7 @@ public partial class webformsADM_producto_EditarProductos : System.Web.UI.Page
             Response.Write(exten + "," + tamano);
             nomIMG = FileUpload1.FileName;
 
-            FileUpload1.SaveAs(Server.MapPath("../IMG_SUPERMARKET/" + FileUpload1.FileName));
+            FileUpload1.SaveAs(Server.MapPath("../img/" + FileUpload1.FileName));
 
             try
             {
