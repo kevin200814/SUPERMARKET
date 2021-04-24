@@ -20,14 +20,11 @@ public partial class Vistas_indexPersona : System.Web.UI.Page
         GridView1.DataBind();
     }
 
-    protected void btnActualizar_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("~/Vistas/ManttoPersona.aspx");
-    }
+  
 
     protected void btnNuevo_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/Vistas/ManttoPersona.aspx");
+        Response.Redirect("~/webformsADM/persona/ManttoPersona.aspx");
     }
 
   
