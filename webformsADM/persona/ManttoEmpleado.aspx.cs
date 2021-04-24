@@ -19,8 +19,8 @@ public partial class Vistas_ManttoEmpleado : System.Web.UI.Page
                 txt_FECHA_CONTRATACION_EMPLEADO.Text = "" + objPermisos.FECHA_CONTRATACION_EMPLEADO;
                 txt_HORAS_LABORALES_MENSUALES_EMPLEADO.Text = "" + objPermisos.HORAS_LABORALES_MENSUALES_EMPLEADO;
                 txt_ID_PERSONA_EMPLEADO.Text = "" + objPermisos.ID_PERSONA_EMPLEADO;
-                DropDownList1.Text = "" + objPermisos.ID_CARGO_LABORAL_EMPLEADO;
-                DropDownList2.Text = "" + objPermisos.ID_SUCURSAL_EMPLEADO;
+                DropDownList1.SelectedItem.Value = "" + objPermisos.ID_CARGO_LABORAL_EMPLEADO;
+                DropDownList2.SelectedItem.Value = "" + objPermisos.ID_SUCURSAL_EMPLEADO;
 
             }
 
