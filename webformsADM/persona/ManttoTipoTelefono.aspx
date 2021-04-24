@@ -19,7 +19,7 @@
                
                 <div class="col-md-10">
                      <asp:Label ID="Label1" runat="server" Text="Label">Tipo de telefono</asp:Label>
-                    <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_TIPO_TELEFONO" placeholder="Ingrese Tipo de Telefono" TextMode="Number"></asp:TextBox>
+                    <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_TIPO_TELEFONO" placeholder="Ingrese Tipo de Telefono"></asp:TextBox>
                 </div>
             </div>
 

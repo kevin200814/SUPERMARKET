@@ -11,7 +11,7 @@
                 <div class="form-group">
                     <div class="col-md-10">
                         <asp:Label ID="Label2" runat="server" Text="Label"> Codigo Empleado</asp:Label>
-                        <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_ID_EMPLEADO" placeholder="Ingrese ID"></asp:TextBox>
+                        <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_ID_EMPLEADO" placeholder="Ingrese ID" TextMode="Number"></asp:TextBox>
                     </div>
                 </div>
 
@@ -27,7 +27,7 @@
                     <br />
                     <div class="col-md-10">
                         <asp:Label ID="Label3" runat="server" Text="Label"> Horas Laborales</asp:Label>
-                        <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_HORAS_LABORALES_MENSUALES_EMPLEADO" placeholder="Ingrese Horas Laboradas"></asp:TextBox>
+                        <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_HORAS_LABORALES_MENSUALES_EMPLEADO" placeholder="Ingrese Horas Laboradas" TextMode="Number"></asp:TextBox>
                     </div>
                 </div>
 
@@ -35,6 +35,7 @@
                     <br />
                     <div class="col-md-10">
                         <asp:Label ID="Label4" runat="server" Text="Label">persona</asp:Label>
+                        <asp:dropdownlist ID = "Dropdownlist3" Height="32px" Width="944px" runat="server" DataSourceID="odsPersona" DataTextField="PRIMER_NOMBRE_PERSONA" DataValueField="ID_PERSONA"></asp:dropdownlist>
                         <asp:ObjectDataSource ID="odsPersona" runat="server" SelectMethod="MostrarTodos" TypeName="PERSONA_BLL"></asp:ObjectDataSource>
                         <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_ID_PERSONA_EMPLEADO" placeholder="Ingrese Persona Empleado"></asp:TextBox>
                     </div>
@@ -54,7 +55,9 @@
                     <br />
                     <div class="col-md-10">
                         <asp:Label ID="Label6" runat="server" Text="Label"> Sucursal de trabajo</asp:Label>
-                        <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_ID_SUCURSAL_EMPLEADO" placeholder="Ingrese Sucursal"></asp:TextBox>
+                       
+                        <asp:dropdownlist ID="DropDownList2" Height="32px" Width="944px" runat="server" DataSourceID="odsSucursal" DataTextField="NOMBRE_SUCURSAL" DataValueField="ID_SUCURSAL"></asp:dropdownlist>
+                        <asp:ObjectDataSource ID="odsSucursal" runat="server" SelectMethod="MostrarTodos" TypeName="SUCURSAL_BLL"></asp:ObjectDataSource>
                     </div>
                 </div>
 

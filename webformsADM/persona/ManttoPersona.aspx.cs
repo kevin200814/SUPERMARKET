@@ -23,8 +23,8 @@ public partial class Vistas_ManttoPersona : System.Web.UI.Page
                 txt_FECHA_NACIMIENTO_PERSONA.Text = "" + objPermisos.FECHA_NACIMIENTO_PERSONA;
                 txt_NUMERO_IDENTIDAD_PERSONA.Text = objPermisos.NUMERO_IDENTIDAD_PERSONA;
                 txt_DIRECCION_RESIDENCIA_PERSONA.Text = objPermisos.DIRECCION_RESIDENCIA_PERSONA;
-                txt_ID_CIUDAD_RESIDENCIA_PERSONA.Text = "" + objPermisos.ID_CIUDAD_RESIDENCIA_PERSONA;
-                txt_ID_SEXO_PERSONA.Text = "" + objPermisos.ID_SEXO_PERSONA;
+                DropDownList1.SelectedItem.Value = "" + objPermisos.ID_CIUDAD_RESIDENCIA_PERSONA;
+                DropDownList2.SelectedItem.Value = "" + objPermisos.ID_SEXO_PERSONA;
 
 
             }
@@ -42,8 +42,8 @@ public partial class Vistas_ManttoPersona : System.Web.UI.Page
         DateTime FECHA_NACIMIENTO_PERSONA = DateTime.Parse(txt_FECHA_NACIMIENTO_PERSONA.Text);
         string NUMERO_IDENTIDAD_PERSONA = txt_NUMERO_IDENTIDAD_PERSONA.Text;
         string DIRECCION_RESIDENCIA_PERSONA = txt_DIRECCION_RESIDENCIA_PERSONA.Text;
-        int ID_CIUDAD_RESIDENCIA_PERSONA = Convert.ToInt32(txt_ID_CIUDAD_RESIDENCIA_PERSONA.Text);
-        int ID_SEXO_PERSONA = Convert.ToInt32(txt_ID_SEXO_PERSONA.Text);
+        int ID_CIUDAD_RESIDENCIA_PERSONA = Convert.ToInt32(DropDownList1.SelectedItem.Value);
+        int ID_SEXO_PERSONA = Convert.ToInt32(DropDownList2.SelectedItem.Value);
         try
         {
             PERSONA_BLL.Insertar(ID_PERSONA, PRIMER_NOMBRE_PERSONA, SEGUNDO_NOMBRE_PERSONA, PRIMER_APELLIDO_PERSONA,
@@ -67,8 +67,8 @@ public partial class Vistas_ManttoPersona : System.Web.UI.Page
         DateTime FECHA_NACIMIENTO_PERSONA = DateTime.ParseExact(txt_FECHA_NACIMIENTO_PERSONA.Text, "yyyy/MM/dd", null);
         string NUMERO_IDENTIDAD_PERSONA = txt_NUMERO_IDENTIDAD_PERSONA.Text;
         string DIRECCION_RESIDENCIA_PERSONA = txt_DIRECCION_RESIDENCIA_PERSONA.Text;
-        int ID_CIUDAD_RESIDENCIA_PERSONA = Convert.ToInt32(txt_ID_CIUDAD_RESIDENCIA_PERSONA.Text);
-        int ID_SEXO_PERSONA = Convert.ToInt32(txt_ID_SEXO_PERSONA.Text);
+        int ID_CIUDAD_RESIDENCIA_PERSONA = Convert.ToInt32(DropDownList1.SelectedItem.Value);
+        int ID_SEXO_PERSONA = Convert.ToInt32(DropDownList2.SelectedItem.Value);
         try
         {
             PERSONA_BLL.Actualizar(ID_PERSONA, PRIMER_NOMBRE_PERSONA, SEGUNDO_NOMBRE_PERSONA, PRIMER_APELLIDO_PERSONA,
