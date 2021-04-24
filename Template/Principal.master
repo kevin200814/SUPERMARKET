@@ -20,28 +20,15 @@
 <body>
     <!-- Header -->
     <header id="header">
-        <div class="logo"><a href="IndexPrincipal.aspx">La Tiendita <span> SuperMarket </span></a></div>
+        <div class="logo"><a href="~/">La Tiendita <span> SuperMarket </span></a></div>
         <a href="#menu">Menu</a>
     </header>
     <!-- Nav -->
     <nav id="menu">
         <ul class="links">
-            <li><a href="../webformsADM/IndexPrincipal.aspx">Inicio</a></li>
-            <li><a href="../webformsADM/Login.aspx">Iniciar Sesion</a></li>
+            <li><a href="#">Inicio</a></li>
             <li><a href="#">Registrarse</a></li>
             <li><a href="#">Realizar un Pedido</a></li>
-            <li><a href="../webformsADM/persona/indexPersona.aspx">Personas Registradas</a></li>
-            <li><a href="../webformsADM/persona/IndexSexo.aspx">Tipo de genero</a></li>
-            <li><a href="../webformsADM/persona/indexEmpleado.aspx">Empleados</a></li>
-            <li><a href="../webformsADM/persona/IndexCargoLaboral.aspx">Tipos de cargo laboral</a></li>
-            <li><a href="../webformsADM/persona/IndexTipoTelefono.aspx">Tipos de telefono</a></li>
-            <li><a href="../webformsADM/producto/IndexProveedor.aspx">Proveedores</a></li>
-            <li><a href="../webformsADM/producto/IndexTipoProd.aspx">Tipos de Productos</a></li>
-            <li><a href="../webformsADM/USUARIO/IndexTipoUser.aspx">Tipos de Usuario</a></li>
-            <li><a href="../webformsADM/UBICACION/IndexCiudad.aspx">Ciudades</a></li>
-            <li><a href="../webformsADM/UBICACION/IndexDepartamento.aspx">Departamentos</a></li>
-            <li><a href="../webformsADM/UBICACION/IndexPais.aspx">Pais</a></li>
-            <li><a href="../webformsADM/UBICACION/IndexSucursal.aspx">Sucursal</a></li>
             <li><a href="#">Vegetales</a></li>
             <li><a href="#">Frutas</a></li>
             <li><a href="#">Carnes</a></li>

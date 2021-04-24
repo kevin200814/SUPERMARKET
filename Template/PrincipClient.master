@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Login.master.cs" Inherits="Template_Login" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PrincipClient.master.cs" Inherits="PrincipClient" %>
 
 <!DOCTYPE html>
 
@@ -21,20 +21,39 @@
     <!-- Header -->
     <header id="header">
         <div class="logo"><a href="~/">La Tiendita <span> SuperMarket </span></a></div>
+        <asp:Label ID="Label1" runat="server" Text="Label" ForeColor="White"></asp:Label>
         <a href="#menu">Menu</a>
     </header>
     <!-- Nav -->
     <nav id="menu">
         <ul class="links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">INICIAR SESIÓN</a></li>
-            <li><a href="../LOGIN/Registrarse.aspx">Registrarse</a></li>
+            <li><a href="Index.aspx">Inicio</a></li>
+            <li><a href="Registro.aspx">Registrarse</a></li>
+            <li><a href="#">Realizar un Pedido</a></li>
+            <li><a href="IndexPaises.aspx">Mantto Paises</a></li>
+            <li><a href="IndexSexos.aspx">Mantto Sexos</a></li>
+            <li><a href="IndexPersona.aspx">Mantto Persona</a></li>
+            <li><a href="#">Vegetales</a></li>
+            <li><a href="#">Frutas</a></li>
+            <li><a href="#">Carnes</a></li>
+            <li><a href="#">Mariscos</a></li>
+            <li><a href="#">Licores</a></li>
+            <li><a href="#">Snacks</a></li>
+            <li><a href="#">Tecnologia</a></li>
+            <li>
+                <asp:HyperLink runat="server" NavigateUrl="~/LOGIN/Login.aspx">
+                    Cerrar Sesion
+                </asp:HyperLink> 
+            </li>
+
         </ul>
     </nav>
 
     <form id="form1" runat="server">
+        <asp:Button ID="Button1" runat="server" OnClick="CerrarSesion" Text="Cerrar Sesion" />
     <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
         </asp:ContentPlaceHolder>
     </div>
     </form>
@@ -64,3 +83,4 @@
     
 </body>
 </html>
+
