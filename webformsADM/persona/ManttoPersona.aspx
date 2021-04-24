@@ -11,7 +11,7 @@
              
                 <div class="col-md-10">
                     <asp:Label ID="Label1" runat="server" Text="Label"> Codigo Persona</asp:Label>
-                    <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_ID_PERSONA" placeholder="Ingrese ID"></asp:TextBox>
+                    <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_ID_PERSONA" placeholder="Ingrese ID" TextMode="Number"></asp:TextBox>
                 </div>
             </div>
 
@@ -65,6 +65,7 @@
             <div class="form-group">
                 <br />
                 <div class="col-md-10">
+                    <asp:Label ID="Label10" runat="server" Text="Label">Direccion de Residencia</asp:Label>
                     <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_DIRECCION_RESIDENCIA_PERSONA" placeholder="Ingrese Residencia"></asp:TextBox>
                 </div>
             </div>
@@ -73,7 +74,9 @@
                 <br />
                 <div class="col-md-10">
                     <asp:Label ID="Label8" runat="server" Text="Label">Ciudad de Residencia</asp:Label>
-                    <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_ID_CIUDAD_RESIDENCIA_PERSONA" placeholder="Ingrese Ciudad"></asp:TextBox>
+                    <asp:DropDownList ID="DropDownList1" Height="32px" Width="944px"  runat="server" DataSourceID="odsCiudad" DataTextField="NOMBRE_CIUDAD" DataValueField="ID_CIUDAD"></asp:DropDownList>
+                    <asp:ObjectDataSource ID="odsCiudad" runat="server" SelectMethod="MostrarTodos" TypeName="CIUDAD_BLL"></asp:ObjectDataSource>
+                    
                 </div>
             </div>
 
@@ -81,7 +84,9 @@
                 <br />
                 <div class="col-md-10">
                     <asp:Label ID="Label9" runat="server" Text="Label">Sexo</asp:Label>
-                    <asp:TextBox runat="server" Height="32px" Width="944px" CssClass="form-control" Rows="5" ID="txt_ID_SEXO_PERSONA" placeholder="Ingrese Sexo"></asp:TextBox>
+                    <asp:DropDownList ID="DropDownList2" runat="server" Height="32px" Width="944px" DataSourceID="odsSexo" DataTextField="SEXO" DataValueField="ID_SEXO"></asp:DropDownList>
+                    <asp:ObjectDataSource ID="odsSexo" runat="server" SelectMethod="MostrarTodos" TypeName="SEXO_BLL"></asp:ObjectDataSource>
+                  
                 </div>
             </div>
     

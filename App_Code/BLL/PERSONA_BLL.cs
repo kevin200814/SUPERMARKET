@@ -15,69 +15,62 @@ public class PERSONA_BLL
         //
     }
 
-    static MARKET_DSTableAdapters.PERSONATableAdapter adto = new MARKET_DSTableAdapters.PERSONATableAdapter();
-
     public static List<PERSONA_DTO> MostrarTodos()
     {
-        List<PERSONA_DTO> mostraroles = new List<PERSONA_DTO>();
-
-        MARKET_DS.PERSONADataTable tabla = adto.MostrarTodoPersona();
-        foreach (MARKET_DS.PERSONARow fila in tabla)
+        List<PERSONA_DTO> mostrarpersona = new List<PERSONA_DTO>();
+        MARKET_DSTableAdapters.PERSONATableAdapter adto = new MARKET_DSTableAdapters.PERSONATableAdapter();
+        MARKET_DS.PERSONADataTable tabla = adto.MostrarPersona();
+        foreach(MARKET_DS.PERSONARow fila in tabla)
         {
-            mostraroles.Add(filaSDTO(fila));
+            mostrarpersona.Add(filaSDTO(fila));
         }
-        return mostraroles;
-    }
 
+        return mostrarpersona;
+    }
+    
     private static PERSONA_DTO filaSDTO(MARKET_DS.PERSONARow fila)
     {
-        PERSONA_DTO objTprod = new PERSONA_DTO();
-        objTprod.ID_PERSONA = fila.ID_PERSONA;
-        objTprod.PRIMER_NOMBRE_PERSONA = fila.PRIMER_NOMBRE_PERSONA;
-        objTprod.SEGUNDO_NOMBRE_PERSONA = fila.SEGUNDO_NOMBRE_PERSONA;
-        objTprod.PRIMER_APELLIDO_PERSONA = fila.PRIMER_APELLIDO_PERSONA;
-        objTprod.SEGUNDO_APELLIDO_PERSONA = fila.SEGUNDO_APELLIDO_PERSONA;
-        objTprod.FECHA_NACIMIENTO_PERSONA = fila.FECHA_NACIMIENTO_PERSONA;
-        objTprod.NUMERO_IDENTIDAD_PERSONA = fila.NUMERO_IDENTIDAD_PERSONA;
-        objTprod.DIRECCION_RESIDENCIA_PERSONA = fila.DIRECCION_RESIDENCIA_PERSONA;
-        objTprod.ID_CIUDAD_RESIDENCIA_PERSONA = fila.ID_CIUDAD_RESIDENCIA_PERSONA;
-        objTprod.ID_SEXO_PERSONA = fila.ID_SEXO_PERSONA;
-
-
-        return objTprod;
+        PERSONA_DTO objPersona = new PERSONA_DTO();
+        objPersona.ID_PERSONA = fila.ID_PERSONA;
+        objPersona.PRIMER_NOMBRE_PERSONA = fila.PRIMER_NOMBRE_PERSONA;
+        objPersona.SEGUNDO_NOMBRE_PERSONA = fila.SEGUNDO_NOMBRE_PERSONA;
+        objPersona.PRIMER_APELLIDO_PERSONA = fila.PRIMER_APELLIDO_PERSONA;
+        objPersona.SEGUNDO_APELLIDO_PERSONA = fila.SEGUNDO_APELLIDO_PERSONA;
+        objPersona.FECHA_NACIMIENTO_PERSONA = fila.FECHA_NACIMIENTO_PERSONA;
+        objPersona.NUMERO_IDENTIDAD_PERSONA = fila.NUMERO_IDENTIDAD_PERSONA;
+        objPersona.DIRECCION_RESIDENCIA_PERSONA = fila.DIRECCION_RESIDENCIA_PERSONA;
+        objPersona.ID_CIUDAD_RESIDENCIA_PERSONA = fila.ID_CIUDAD_RESIDENCIA_PERSONA;
+        objPersona.ID_SEXO_PERSONA = fila.ID_SEXO_PERSONA;
+        return objPersona;
     }
-    public static PERSONA_DTO MostrarID(int ID_PERSONA)
+
+    public static PERSONA_DTO MostrarID(int codPersona)
     {
-        MARKET_DS.PERSONADataTable tabla = adto.MostrarPersonaID(ID_PERSONA);
-        if (tabla.Rows.Count == 0)
+        MARKET_DSTableAdapters.PERSONATableAdapter adto = new MARKET_DSTableAdapters.PERSONATableAdapter();
+        MARKET_DS.PERSONADataTable tabla = adto.MostrarPersonaID(codPersona);
+        if(tabla.Rows.Count == 0)
         {
             return null;
         }
-
         return filaSDTO(tabla[0]);
     }
 
-    public static void Insertar(int ID_PERSONA, string PRIMER_NOMBRE_PERSONA, string SEGUNDO_NOMBRE_PERSONA, string PRIMER_APELLIDO_PERSONA, 
-        string SEGUNDO_APELLIDO_PERSONA, DateTime FECHA_NACIMIENTO_PERSONA, string NUMERO_IDENTIDAD_PERSONA, string DIRECCION_RESIDENCIA_PERSONA,
-        int ID_CIUDAD_RESIDENCIA_PERSONA, int ID_SEXO_PERSONA)
+    public static void Insertar(int idPersona, string Pnombre, string Snombre, string Papellido, string Sapellido, DateTime FechaN, string NumIden, string Direccion, int idCiudad, int idSexo)
     {
-        adto.Insert(ID_PERSONA, PRIMER_NOMBRE_PERSONA, SEGUNDO_NOMBRE_PERSONA, PRIMER_APELLIDO_PERSONA,
-        SEGUNDO_APELLIDO_PERSONA, FECHA_NACIMIENTO_PERSONA, NUMERO_IDENTIDAD_PERSONA, DIRECCION_RESIDENCIA_PERSONA,
-        ID_CIUDAD_RESIDENCIA_PERSONA, ID_SEXO_PERSONA);
+        MARKET_DSTableAdapters.PERSONATableAdapter adto = new MARKET_DSTableAdapters.PERSONATableAdapter();
+        adto.Insert(idPersona, Pnombre, Snombre, Papellido, Sapellido, FechaN, NumIden, Direccion, idCiudad, idSexo);
     }
 
-    public static void Borrar(int ID_PERSONA)
+    public static void Borrar(int codPersona)
     {
-        adto.Delete(ID_PERSONA);
+        MARKET_DSTableAdapters.PERSONATableAdapter adto = new MARKET_DSTableAdapters.PERSONATableAdapter();
+        adto.Delete(codPersona);
+
     }
 
-    public static void Actualizar(int ID_PERSONA, string PRIMER_NOMBRE_PERSONA, string SEGUNDO_NOMBRE_PERSONA, string PRIMER_APELLIDO_PERSONA, 
-        string SEGUNDO_APELLIDO_PERSONA, DateTime FECHA_NACIMIENTO_PERSONA, string NUMERO_IDENTIDAD_PERSONA, string DIRECCION_RESIDENCIA_PERSONA,
-        int ID_CIUDAD_RESIDENCIA_PERSONA, int ID_SEXO_PERSONA)
+    public static void Actualizar(int idPersona, string Pnombre, string Snombre, string Papellido, string Sapellido, DateTime FechaN, string NumIden, string Direccion, int idCiudad, int idSexo)
     {
-        adto.Update(PRIMER_NOMBRE_PERSONA, SEGUNDO_NOMBRE_PERSONA, PRIMER_APELLIDO_PERSONA,
-        SEGUNDO_APELLIDO_PERSONA, FECHA_NACIMIENTO_PERSONA, NUMERO_IDENTIDAD_PERSONA, DIRECCION_RESIDENCIA_PERSONA,
-        ID_CIUDAD_RESIDENCIA_PERSONA, ID_SEXO_PERSONA, ID_PERSONA);
+        MARKET_DSTableAdapters.PERSONATableAdapter adto = new MARKET_DSTableAdapters.PERSONATableAdapter();
+        adto.Update(Pnombre, Snombre, Papellido, Sapellido, FechaN, NumIden, Direccion, idCiudad, idSexo, idPersona);
     }
-
 }

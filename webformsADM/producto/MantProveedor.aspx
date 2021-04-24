@@ -9,15 +9,15 @@
                <div class="form-horizontal">
                 <div class="form-group">
                     <div class="col-md-10">
-                           <asp:Label ID="Label2" runat="server" Text="Label"> Codigo producto</asp:Label>
-                        <asp:TextBox  ID="txtidprov" CssClass="form-control"  Height="32px" Width="944px" Rows="5" runat="server" placeholder="Ingrese el ID"></asp:TextBox>
+                           <asp:Label ID="Label2" runat="server" Text="Label">Id Proveedor</asp:Label>
+                        <asp:TextBox  ID="txtidprov" CssClass="form-control"  Height="32px" Width="944px" Rows="5" runat="server" placeholder="Ingrese el ID" TextMode="Number"></asp:TextBox>
                     </div>
                 </div>
 
             <div class="form-group">
                 <br />
                 <div class="col-md-10">
-                       <asp:Label ID="Label1" runat="server" Text="Label"> Codigo producto</asp:Label>
+                       <asp:Label ID="Label1" runat="server" Text="Label"> Nombre Proveedor</asp:Label>
                 <asp:TextBox ID="txtNombreProv" CssClass="form-control"  Height="32px" Width="944px" Rows="5"  runat="server" placeholder="Ingrese el Nombre del Proveedor"></asp:TextBox>
                 </div>
             </div>
