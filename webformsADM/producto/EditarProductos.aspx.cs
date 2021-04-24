@@ -25,11 +25,11 @@ public partial class webformsADM_producto_EditarProductos : System.Web.UI.Page
                     TextCalend2.Text = "" + objpermisos.FECHA_VENCIMIENTO_PRODUCTO;
                     TxtVent.Text = "" + objpermisos.VENTA_PRODUCTO;
                     TxtCant.Text = "" + objpermisos.CANTIDAD_PRODUCTO;
-                    TxtTiprod.Text = "" + objpermisos.ID_TIPO_PRODUCTO;
-                    TxtSuc.Text = "" + objpermisos.ID_SUCURSAL_PRODUCTO;
+                    DropDownList1.Text = "" + objpermisos.ID_TIPO_PRODUCTO;
+                    DropDownList2.Text = "" + objpermisos.ID_SUCURSAL_PRODUCTO;
                     TxtPrecio.Text = "" + objpermisos.PRECIO;
                     TxtDescripcion.Text = "" + objpermisos.DESCRIPCION_PRODUCTO;
-                    Image1.ImageUrl = "~/IMG_SUPERMARKET/" + objpermisos.IMG.ToString();
+                    Image1.ImageUrl = "~/img/" + objpermisos.IMG.ToString();
                 }
             }
         }
@@ -52,8 +52,8 @@ public partial class webformsADM_producto_EditarProductos : System.Web.UI.Page
         DateTime fechaven = Convert.ToDateTime(TextCalend2.Text);
         double vent = Convert.ToDouble(TxtVent.Text);
         int cant = Convert.ToInt32(TxtCant.Text);
-        int tiprod = Convert.ToInt32(TxtTiprod.Text);
-        int sucprod = Convert.ToInt32(TxtSuc.Text);
+        int tiprod = Convert.ToInt32(DropDownList1.SelectedItem.Value);
+        int sucprod = Convert.ToInt32(DropDownList2.SelectedItem.Value);
         double prec = Convert.ToDouble(TxtPrecio.Text);
         string descprod = TxtDescripcion.Text;
 
@@ -65,12 +65,12 @@ public partial class webformsADM_producto_EditarProductos : System.Web.UI.Page
             Response.Write(exten + "," + tamano);
             nomIMG = FileUpload1.FileName;
 
-            FileUpload1.SaveAs(Server.MapPath("../img/" + FileUpload1.FileName));
+            FileUpload1.SaveAs(Server.MapPath("../../img/" + FileUpload1.FileName));
 
             try
             {
                 PRODUCTOS_BLL.Insertar(codprod, nombreprod, fechaelab, fechaven, vent, cant, descprod, tiprod, sucprod, nomIMG, prec);
-                Response.Redirect("~/wenformsADM/PRODUCTOS_ADMIN.aspx");
+                Response.Redirect("~/webformsADM/producto/ProductosAdmin.aspx");
             }
             catch (Exception ex)
             {
@@ -102,16 +102,7 @@ public partial class webformsADM_producto_EditarProductos : System.Web.UI.Page
         Calendar2.Visible = !Calendar2.Visible;
     }
 
-    protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        this.TxtSuc.Text = DropDownList2.SelectedValue;
-    }
-
-    protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        this.TxtTiprod.Text = DropDownList1.SelectedValue;
-    }
-
+   
     protected void btnActualizar_Click(object sender, EventArgs e)
     {
 
@@ -127,8 +118,8 @@ public partial class webformsADM_producto_EditarProductos : System.Web.UI.Page
         DateTime fechaven = Convert.ToDateTime(TextCalend2.Text);
         double vent = Convert.ToDouble(TxtVent.Text);
         int cant = Convert.ToInt32(TxtCant.Text);
-        int tiprod = Convert.ToInt32(TxtTiprod.Text);
-        int sucprod = Convert.ToInt32(TxtSuc.Text);
+        int tiprod = Convert.ToInt32(DropDownList1.SelectedItem.Value);
+        int sucprod = Convert.ToInt32(DropDownList1.SelectedItem.Value);
         double prec = Convert.ToDouble(TxtPrecio.Text);
         string descprod = TxtDescripcion.Text;
 
@@ -140,12 +131,12 @@ public partial class webformsADM_producto_EditarProductos : System.Web.UI.Page
             Response.Write(exten + "," + tamano);
             nomIMG = FileUpload1.FileName;
 
-            FileUpload1.SaveAs(Server.MapPath("../IMG_SUPERMARKET/" + FileUpload1.FileName));
+            FileUpload1.SaveAs(Server.MapPath("../../img/" + FileUpload1.FileName));
 
             try
             {
                 PRODUCTOS_BLL.Actualizar(codprod, nombreprod, fechaelab, fechaven, vent, cant, descprod, tiprod, sucprod, nomIMG, prec);
-                Response.Redirect("~/wenformsADM/PRODUCTOS_ADMIN.aspx");
+                Response.Redirect("~/webformsADM/producto/ProductosAdmin.aspx");
             }
             catch (Exception ex)
             {
