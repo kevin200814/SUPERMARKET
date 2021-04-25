@@ -20,7 +20,9 @@
 <body>
     <!-- Header -->
     <header id="header">
+
         <div class="logo"><a href="IndexPrincipal.aspx">La Tiendita <span> SuperMarket </span></a></div>
+        <a href="#">Ver carrito</a>
         <a href="#menu">Menu</a>
     </header>
     <!-- Nav -->
@@ -44,7 +46,7 @@
             <li><a href="../webformsADM/UBICACION/IndexDepartamento.aspx">Departamentos</a></li>
             <li><a href="../webformsADM/UBICACION/IndexPais.aspx">Pais</a></li>
             <li><a href="../webformsADM/UBICACION/IndexSucursal.aspx">Sucursal</a></li>
-            <li><a href="#">Vegetales</a></li>
+            <li><a href="../webformsADM/catalogo/ProVerduras.aspx">Vegetales</a></li>
             <li><a href="#">Frutas</a></li>
             <li><a href="#">Carnes</a></li>
             <li><a href="#">Mariscos</a></li>

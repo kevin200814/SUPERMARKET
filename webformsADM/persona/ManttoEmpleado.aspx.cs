@@ -18,9 +18,9 @@ public partial class Vistas_ManttoEmpleado : System.Web.UI.Page
                 txt_ID_EMPLEADO.Text = "" + objPermisos.ID_EMPLEADO;
                 txt_FECHA_CONTRATACION_EMPLEADO.Text = "" + objPermisos.FECHA_CONTRATACION_EMPLEADO;
                 txt_HORAS_LABORALES_MENSUALES_EMPLEADO.Text = "" + objPermisos.HORAS_LABORALES_MENSUALES_EMPLEADO;
-                txt_ID_PERSONA_EMPLEADO.Text = "" + objPermisos.ID_PERSONA_EMPLEADO;
-                DropDownList1.SelectedItem.Value = "" + objPermisos.ID_CARGO_LABORAL_EMPLEADO;
-                DropDownList2.SelectedItem.Value = "" + objPermisos.ID_SUCURSAL_EMPLEADO;
+                Dropdownlist3.Text = "" + objPermisos.ID_PERSONA_EMPLEADO;
+                DropDownList1.Text = "" + objPermisos.ID_CARGO_LABORAL_EMPLEADO;
+                DropDownList2.Text = "" + objPermisos.ID_SUCURSAL_EMPLEADO;
 
             }
 
@@ -30,9 +30,9 @@ public partial class Vistas_ManttoEmpleado : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
         int ID_EMPLEADO = Convert.ToInt32(txt_ID_EMPLEADO.Text);
-        DateTime FECHA_CONTRATACION_EMPLEADO = DateTime.ParseExact(txt_FECHA_CONTRATACION_EMPLEADO.Text, "yyyy/MM/dd", null);
+        DateTime FECHA_CONTRATACION_EMPLEADO = DateTime.Parse(txt_FECHA_CONTRATACION_EMPLEADO.Text);
         int HORAS_LABORALES_MENSUALES_EMPLEADO = Convert.ToInt32(txt_HORAS_LABORALES_MENSUALES_EMPLEADO.Text);
-        int ID_PERSONA_EMPLEADO = Convert.ToInt32(txt_ID_PERSONA_EMPLEADO.Text);
+        int ID_PERSONA_EMPLEADO = Convert.ToInt32(Dropdownlist3.SelectedItem.Value);
         int ID_CARGO_LABORAL_EMPLEADO = Convert.ToInt32(DropDownList1.SelectedItem.Value);
         int ID_SUCURSAL_EMPLEADO = Convert.ToInt32(DropDownList2.SelectedItem.Value);
 
@@ -51,9 +51,9 @@ public partial class Vistas_ManttoEmpleado : System.Web.UI.Page
     protected void Button2_Click(object sender, EventArgs e)
     {
         int ID_EMPLEADO = Convert.ToInt32(txt_ID_EMPLEADO.Text);
-        DateTime FECHA_CONTRATACION_EMPLEADO = DateTime.ParseExact(txt_FECHA_CONTRATACION_EMPLEADO.Text, "yyyy/MM/dd", null);
+        DateTime FECHA_CONTRATACION_EMPLEADO = DateTime.Parse(txt_FECHA_CONTRATACION_EMPLEADO.Text);
         int HORAS_LABORALES_MENSUALES_EMPLEADO = Convert.ToInt32(txt_HORAS_LABORALES_MENSUALES_EMPLEADO.Text);
-        int ID_PERSONA_EMPLEADO = Convert.ToInt32(txt_ID_PERSONA_EMPLEADO.Text);
+        int ID_PERSONA_EMPLEADO = Convert.ToInt32(Dropdownlist3.SelectedItem.Value);
         int ID_CARGO_LABORAL_EMPLEADO = Convert.ToInt32(DropDownList1.SelectedItem.Value);
         int ID_SUCURSAL_EMPLEADO = Convert.ToInt32(DropDownList2.SelectedItem.Value);
         try

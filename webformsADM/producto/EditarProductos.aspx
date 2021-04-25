@@ -4,12 +4,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
- <h2>Registrar un Nuevo Producto</h2>
-
-
+   <div class="container body-content">
+            <h2>Productos</h2>
             <div class="form-horizontal">
-                <hr />
-               
+                <br />
                  <div class="form-group">
                     ID Producto &nbsp;<asp:Image ID="Image1" runat="server" />
                     <br />
@@ -143,6 +141,7 @@
                     </div>
                 </div>
                 </div>
+       </div>
 
 </asp:Content>
 
